@@ -4,9 +4,126 @@
     <meta charset="utf-8">
     <title>MOVIE PROJECT</title>
     <style>
+    @IMPORT <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+
+   * {
+     box-sizing: border-box;
+   }
+
+   body {
+     font-family: 'Poor Story', cursive;
+     background: #bdffbd;
+   }
+
+   .wrapper {
+     width: 100%;
+     padding: 0 2rem;
+     text-align: center;
+   }
+   .polaroid {
+     background: #fff;
+     padding: 1rem;
+     box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+
+   }
+   .polaroid > img{
+     max-width: 100%;
+     height: auto;
+   }
+   .caption {
+     font-size: 1.8rem;
+     text-align: center;
+     line-height: 2em;
+   }
+   .item {
+     width: 30%;
+     display: inline-block;
+     margin-top: 2rem;
+     filter: grayscale(100%);
+   }
+   .item .polaroid:before {
+     content: '';
+     position: absolute;
+     z-index: -1;
+     transition: all 0.35s;
+   }
+   .item:nth-of-type(4n+1) {
+     transform: scale(0.8, 0.8) rotate(5deg);
+     transition: all 0.35s;
+   }
+   .item:nth-of-type(4n+1) .polaroid:before {
+     transform: rotate(6deg);
+     height: 20%;
+     width: 47%;
+     bottom: 30px;
+     right: 12px;
+     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+   }
+   .item:nth-of-type(4n+2) {
+     transform: scale(0.8, 0.8) rotate(-5deg);
+     transition: all 0.35s;
+   }
+   .item:nth-of-type(4n+2) .polaroid:before {
+     transform: rotate(-6deg);
+     height: 20%;
+     width: 47%;
+     bottom: 30px;
+     left: 12px;
+     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+   }
+   .item:nth-of-type(4n+4) {
+     transform: scale(0.8, 0.8) rotate(3deg);
+     transition: all 0.35s;
+   }
+   .item:nth-of-type(4n+4) .polaroid:before {
+     transform: rotate(4deg);
+     height: 20%;
+     width: 47%;
+     bottom: 30px;
+     right: 12px;
+     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+   }
+   .item:nth-of-type(4n+3) {
+     transform: scale(0.8, 0.8) rotate(-3deg);
+     transition: all 0.35s;
+   }
+   .item:nth-of-type(4n+3) .polaroid:before {
+     transform: rotate(-4deg);
+     height: 20%;
+     width: 47%;
+     bottom: 30px;
+     left: 12px;
+     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+   }
+   .item:hover {
+     filter: none;
+     transform: scale(1, 1) rotate(0deg) !important;
+     transition: all 0.35s;
+   }
+   .item:hover .polaroid:before {
+     content: '';
+     position: absolute;
+     z-index: -1;
+     transform: rotate(0deg);
+     height: 90%;
+     width: 90%;
+     bottom: 0%;
+     right: 5%;
+     box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+     transition: all 0.35s;
+   }
+
+
+
+
+
+
+
+
+
 img {
-  text-align: center;
-  max-height:20%;
+  text-align:center;
+  max-height:500px;
   width: auto;
 
 }
@@ -21,9 +138,11 @@ div.container {
   text-align:center;
   padding: 5px 20px;}
 
-    body {
+  body {
       margin:25px;
       background-image: url(img/sky.jpg);
+      background-repeat: no-repeat;
+      background-size:cover;
     }
 
 h1 {
@@ -35,15 +154,17 @@ h2 {
 }
 table {
   border-style:double;
-  border-spacing:15px
+  border-spacing:20px;
+  width:10px
 }
     </style>
   </head>
   <body>
     <h1>⋈ 君の名は : YOUR NAME ⋈</h1>
     <h2>Director: Makoto Shinkai</h2>
+    <center>
     <img src="img/name.jpg" alt="YOUR NAME">
-
+  </center>
     <a href="https://www.youtube.com/watch?v=zfVcEc8C_80&has_verified=1" target="blank">TRAILER</a>
 
     <p>Two teenagers share a profound,
@@ -52,16 +173,6 @@ table {
       become even more complicated when the
        boy and girl decide to meet in person.
     </p>
-    <h1>JAPANESE VOICE ACTORS</h1>
-    <ul>
-      <li>Mone Kamishiraishi AS Mitsuha Miyamizu</li>
-      <li>Ryūnosuke Kamiki AS Taki Tachibana</li>
-    </ul>
-    <h1>AMERICAN VOICE ACTORS</h1>
-    <ul>
-      <li>Stephanie Sheh as Mitsuha Miyamizu</li>
-      <li>Michael Sinterniklaas as Taki Tachibana</li>
-    </ul>
     <table>
       <tr>
         <th>Japan, Released Date</th>
@@ -72,65 +183,87 @@ table {
         <td>April 7,2017</td>
       </tr>
     </table>
-    <table>
+    <h1>JAPANESE VOICE ACTORS</h1>
+    <ul>
+      <li>Mone Kamishiraishi AS Mitsuha Miyamizu</li>
+      <li>Ryūnosuke Kamiki AS Taki Tachibana</li>
+    </ul>
+    <h1>AMERICAN VOICE ACTORS</h1>
+    <ul>
+      <li>Stephanie Sheh as Mitsuha Miyamizu</li>
+      <li>Michael Sinterniklaas as Taki Tachibana</li>
+    </ul>
+
+
+    <table border="2">
       <tr>
         <th>Yume Tōrō</th>
-        <th>Mitsuha no Tsūgaku</th>
-        <th>Itomori Kōkō</th>
         <th>Hajimete no Tōkyō</th>
+            <th>Futari no Ihen </th>
+            <th>Dēto</th>
+              <th>Hida Tanbō</th>
+              <th>Mitsuha no Tēma</th>
+      </tr>
+      <tr>
+        <td>Dream Lantern</td>
+        <td>First Time in Tokyo</td>
+          <td>Their accident</td>
+          <td>Date</td>
+                  <td>Searching for Hida</td>
+                      <td>Theme of Mitsuha</td>
+      </tr>
+      <tr>
+        <th>Mitsuha no Tsūgaku</th>
         <th>Akogare Cafe</th>
+          <th>Zen Zen Zense</th>
+            <th>Akimatsuri</th>
+              <th>Kuchikamizake Torippu</th>
+              <th>Mienai Futari</th>
+      </tr>
+      <tr>
+        <td>Mitsuha’s Commute</td>
+        <td>Beloved Cafe</td>
+        <td>Many Previous Existences</td>
+                <td>Autumn Festival</td>
+                  <td>Kuchikamizake Trip</td>
+                    <td>The Unseen Pair</td>
+      </tr>
+      <tr>
+        <th>Itomori Kōkō</th>
         <th>Okudera Senpai no Tēma</th>
-        <th>Futari no Ihen </th>
-        <th>Zen Zen Zense</th>
-        <th>Goshintai</th>
-        <th>Dēto</th>
-        <th>Akimatsuri</th>
-        <th>Kioku o Yobiokosu Taki</th>
-        <th>Hida Tanbō</th>
+                <th>Goshintai</th>
+                <th>Kioku o Yobiokosu Taki</th>
+                    <th>Sakusen Kaigi</th>
+                  <th>Katawaredoki</th>
+      </tr>
+        <td>Itomori High School</td>
+        <td>Okudera Senpai’s Theme</td>
+        <td>Object of Worship</td>
+                <td>Taki Remembers</td>
+                <td>Strategy Meeting</td>
+                <td>Twilight</td>
+      </tr>
+      <tr>
         <th>Kieta Machi</th>
         <th>Toshokan</th>
         <th>Ryokan no Yoru</th>
         <th>Goshintai e Futatabi </th>
-        <th>Kuchikamizake Torippu</th>
-        <th>Sakusen Kaigi</th>
         <th>Chō Chō Settoku</th>
-        <th>Mitsuha no Tēma</th>
-        <th>Mienai Futari</th>
-        <th>Katawaredoki</th>
         <th>Supākuru</th>
-        <th>Dēto 2</th>
-        <th>Nandemonaiya</th>
       </tr>
       <tr>
-        <td>Dream Lantern</td>
-        <td>Mitsuha’s Commute</td>
-        <td>Itomori High School</td>
-        <td>First Time in Tokyo</td>
-        <td>Beloved Cafe</td>
-        <td>Okudera Senpai’s Theme</td>
-        <td>Their accident</td>
-        <td>Many Previous Existences</td>
-        <td>Object of Worship</td>
-        <td>Date</td>
-        <td>Autumn Festival</td>
-        <td>Taki Remembers</td>
-        <td>Searching for Hida</td>
         <td>The Town that Disappeared</td>
         <td>Library</td>
         <td>Night at the Inn</td>
         <td>Once again to the Shrine</td>
-        <td>Kuchikamizake Trip</td>
-        <td>Strategy Meeting</td>
         <td>Convincing the Mayor</td>
-        <td>Theme of Mitsuha</td>
-        <td>The Unseen Pair</td>
-        <td>Twilight</td>
         <td>Sparkle</td>
-        <td>Date 2</td>
-        <td>It’s Nothing</td>
       </tr>
     </table>
-
+    <td>Date 2</td>
+    <td>It’s Nothing</td>
+    <th>Dēto 2</th>
+    <th>Nandemonaiya</th>
 <div class="polaroid">
   <img src="img/city.jpg" alt="city" style="width:100%">
   <div class="container">
@@ -177,6 +310,44 @@ table {
   <div class="container">
   <p>JAPANESE TEMPLE</p>
   </div>
+</div>
+
+
+
+
+
+<div class="wrapper">
+
+  <div class="item">
+    <div class="polaroid"><img src="">
+      <div class="caption">I Miss London</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="">
+      <div class="caption">Love ballons</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="">
+      <div class="caption">Vintage life </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="">
+      <div class="caption">Summer Day</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="">
+      <div class="caption">Art</div>
+    </div>
+  </div>
+
 </div>
   </body>
 </html>
