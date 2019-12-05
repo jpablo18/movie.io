@@ -5,115 +5,109 @@
     <title>MOVIE PROJECT</title>
     <style>
     @IMPORT <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
-
-   * {
-     box-sizing: border-box;
-   }
-
-   body {
-     font-family: 'Poor Story', cursive;
-     background: #bdffbd;
-   }
-
-   .wrapper {
-     width: 100%;
-     padding: 0 2rem;
-     text-align: center;
-   }
-   .polaroid {
-     background: #fff;
-     padding: 1rem;
-     box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-
-   }
-   .polaroid > img{
-     max-width: 100%;
-     height: auto;
-   }
-   .caption {
-     font-size: 1.8rem;
-     text-align: center;
-     line-height: 2em;
-   }
-   .item {
-     width: 30%;
-     display: inline-block;
-     margin-top: 2rem;
-     filter: grayscale(100%);
-   }
-   .item .polaroid:before {
-     content: '';
-     position: absolute;
-     z-index: -1;
-     transition: all 0.35s;
-   }
-   .item:nth-of-type(4n+1) {
-     transform: scale(0.8, 0.8) rotate(5deg);
-     transition: all 0.35s;
-   }
-   .item:nth-of-type(4n+1) .polaroid:before {
-     transform: rotate(6deg);
-     height: 20%;
-     width: 47%;
-     bottom: 30px;
-     right: 12px;
-     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-   }
-   .item:nth-of-type(4n+2) {
-     transform: scale(0.8, 0.8) rotate(-5deg);
-     transition: all 0.35s;
-   }
-   .item:nth-of-type(4n+2) .polaroid:before {
-     transform: rotate(-6deg);
-     height: 20%;
-     width: 47%;
-     bottom: 30px;
-     left: 12px;
-     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
-   }
-   .item:nth-of-type(4n+4) {
-     transform: scale(0.8, 0.8) rotate(3deg);
-     transition: all 0.35s;
-   }
-   .item:nth-of-type(4n+4) .polaroid:before {
-     transform: rotate(4deg);
-     height: 20%;
-     width: 47%;
-     bottom: 30px;
-     right: 12px;
-     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-   }
-   .item:nth-of-type(4n+3) {
-     transform: scale(0.8, 0.8) rotate(-3deg);
-     transition: all 0.35s;
-   }
-   .item:nth-of-type(4n+3) .polaroid:before {
-     transform: rotate(-4deg);
-     height: 20%;
-     width: 47%;
-     bottom: 30px;
-     left: 12px;
-     box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
-   }
-   .item:hover {
-     filter: none;
-     transform: scale(1, 1) rotate(0deg) !important;
-     transition: all 0.35s;
-   }
-   .item:hover .polaroid:before {
-     content: '';
-     position: absolute;
-     z-index: -1;
-     transform: rotate(0deg);
-     height: 90%;
-     width: 90%;
-     bottom: 0%;
-     right: 5%;
-     box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
-     transition: all 0.35s;
-   }
-
-
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poor Story', cursive;
+      background: #bdffbd;
+    }
+    .wrapper {
+      width: 100%;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .polaroid {
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    }
+    .polaroid > img{
+      max-width: 100%;
+      height: auto;
+    }
+    .caption {
+      font-size: 1.8rem;
+      text-align: center;
+      line-height: 2em;
+    }
+    .item {
+      width: 28%;
+      display: inline-block;
+      margin-top: 2rem;
+      filter: grayscale(100%);
+    }
+    .item .polaroid:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transition: all 0.35s;
+    }
+    .item:nth-of-type(4n+1) {
+      transform: scale(0.8, 0.8) rotate(5deg);
+      transition: all 0.35s;
+    }
+    .item:nth-of-type(4n+1) .polaroid:before {
+      transform: rotate(6deg);
+      height: 20%;
+      width: 47%;
+      bottom: 30px;
+      right: 12px;
+      box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+    }
+    .item:nth-of-type(4n+2) {
+      transform: scale(0.8, 0.8) rotate(-5deg);
+      transition: all 0.35s;
+    }
+    .item:nth-of-type(4n+2) .polaroid:before {
+      transform: rotate(-6deg);
+      height: 20%;
+      width: 47%;
+      bottom: 30px;
+      left: 12px;
+      box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+    }
+    .item:nth-of-type(4n+4) {
+      transform: scale(0.8, 0.8) rotate(3deg);
+      transition: all 0.35s;
+    }
+    .item:nth-of-type(4n+4) .polaroid:before {
+      transform: rotate(4deg);
+      height: 20%;
+      width: 47%;
+      bottom: 30px;
+      right: 12px;
+      box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+    }
+    .item:nth-of-type(4n+3) {
+      transform: scale(0.8, 0.8) rotate(-3deg);
+      transition: all 0.35s;
+    }
+    .item:nth-of-type(4n+3) .polaroid:before {
+      transform: rotate(-4deg);
+      height: 20%;
+      width: 47%;
+      bottom: 30px;
+      left: 12px;
+      box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+    }
+    .item:hover {
+      filter: none;
+      transform: scale(1, 1) rotate(0deg) !important;
+      transition: all 0.35s;
+    }
+    .item:hover .polaroid:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transform: rotate(0deg);
+      height: 90%;
+      width: 60%;
+      bottom: 0%;
+      right: 5%;
+      box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+      transition: all 0.35s;
+    }
 
 
 
@@ -132,6 +126,9 @@ img {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+}
+ul {
+
 }
 
 div.container {
@@ -157,15 +154,57 @@ table {
   border-spacing:20px;
   width:10px
 }
+iframe {
+  width:560px;
+  height:315px;
+}
+
+
+
+.hi{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
     </style>
   </head>
   <body>
+    <ul class="hi">
+<li><a class="active" href="#home">Home</a></li>
+<li><a href="#News">Info</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+<li><a class="active" href="https://jpablo18.github.io/hometown.io/">HomeTown</a></li>
+<li><a href=" https://jpablo18.github.io/movie.io/">Movie</a></li>
+<li><a href="https://jpablo18.github.io/homepage-css.io/">HOMEPAGE</a></li>
+<li><a href="https://jpablo18.github.io/calendar.io/">Calendar</a></li>
+</ul>
+
     <h1>⋈ 君の名は : YOUR NAME ⋈</h1>
     <h2>Director: Makoto Shinkai</h2>
     <center>
     <img src="img/name.jpg" alt="YOUR NAME">
   </center>
-    <a href="https://www.youtube.com/watch?v=zfVcEc8C_80&has_verified=1" target="blank">TRAILER</a>
+
+  <iframe src="https://www.youtube.com/embed/zfVcEc8C_80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <p>Two teenagers share a profound,
       magical connection upon discovering
@@ -185,15 +224,17 @@ table {
     </table>
     <h1>JAPANESE VOICE ACTORS</h1>
     <ul>
-      <li>Mone Kamishiraishi AS Mitsuha Miyamizu</li>
-      <li>Ryūnosuke Kamiki AS Taki Tachibana</li>
-    </ul>
+    <li>Mone Kamishiraishi AS Mitsuha Miyamizu</li>
+    <li>Ryūnosuke Kamiki AS Taki Tachibana</li>
+  </ul>
     <h1>AMERICAN VOICE ACTORS</h1>
     <ul>
       <li>Stephanie Sheh as Mitsuha Miyamizu</li>
       <li>Michael Sinterniklaas as Taki Tachibana</li>
     </ul>
 
+
+<h1> MUSIC,THEMES AND MORE</h1>
 
     <table border="2">
       <tr>
@@ -264,26 +305,6 @@ table {
     <td>It’s Nothing</td>
     <th>Dēto 2</th>
     <th>Nandemonaiya</th>
-<div class="polaroid">
-  <img src="img/city.jpg" alt="city" style="width:100%">
-  <div class="container">
-  <p>TOKYO</p>
-  </div>
-</div>
-
-<div class="polaroid">
-  <img src="img/house.jpg" alt="house" style="width:100%">
-  <div class="container">
-  <p>COMET</p>
-  </div>
-</div>
-
-<div class="polaroid">
-  <img src="img/light.jpg" alt="city" style="width:100%">
-  <div class="container">
-  <p>ART</p>
-  </div>
-</div>
 
 <div class="polaroid">
   <img src="img/people.jpg" alt="city" style="width:100%">
@@ -299,52 +320,36 @@ table {
   </div>
 </div>
 
-<div class="polaroid">
-  <img src="img/stair.jpg" alt="house" style="width:100%">
-  <div class="container">
-  <p>DYNAMIC MAIN CHARACTER</p>
-  </div>
-</div>
-<div class="polaroid">
-  <img src="img/temple.jpg" alt="city" style="width:100%">
-  <div class="container">
-  <p>JAPANESE TEMPLE</p>
-  </div>
-</div>
-
-
-
-
 
 <div class="wrapper">
 
   <div class="item">
-    <div class="polaroid"><img src="">
-      <div class="caption">I Miss London</div>
+    <div class="polaroid"><img src="img/light.jpg">
+      <div class="caption">ART</div>
     </div>
   </div>
 
   <div class="item">
-    <div class="polaroid"><img src="">
-      <div class="caption">Love ballons</div>
+    <div class="polaroid"><img src="img/house.jpg">
+      <div class="caption">COMET</div>
     </div>
   </div>
 
   <div class="item">
-    <div class="polaroid"><img src="">
-      <div class="caption">Vintage life </div>
+    <div class="polaroid"><img src="img/temple.jpg">
+      <div class="caption">TEMPLE</div>
     </div>
   </div>
 
   <div class="item">
-    <div class="polaroid"><img src="">
-      <div class="caption">Summer Day</div>
+    <div class="polaroid"><img src="img/city.jpg">
+      <div class="caption">TOKYO</div>
     </div>
   </div>
 
   <div class="item">
-    <div class="polaroid"><img src="">
-      <div class="caption">Art</div>
+    <div class="polaroid"><img src="img/stair.jpg">
+      <div class="caption">DYAMIC CHARACTER</div>
     </div>
   </div>
 
