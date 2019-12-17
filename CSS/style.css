@@ -5,6 +5,9 @@
 body {
   font-family: 'Poor Story', cursive;
   background: #bdffbd;
+  background-image: url(img/sky.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 .wrapper {
   width: 100%;
@@ -170,4 +173,10 @@ text-decoration: none;
 
 li a:hover {
 background-color: #111;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
 }
